@@ -1,0 +1,45 @@
+classDiagram
+    class application {
+        <<main table>>
+        +SK_ID_CURR : int
+        +TARGET : binary
+    }
+
+    class bureau {
+        <<credit bureau>>
+        +SK_ID_CURR : int
+        +SK_ID_BUREAU : int
+    }
+
+    class bureau_balance {
+        <<monthly behavior>>
+        +SK_ID_BUREAU : int
+    }
+
+    class previous_application {
+        <<old loans>>
+        +SK_ID_CURR : int
+        +SK_ID_PREV : int
+    }
+
+    class pos_cash_balance {
+        <<POS behavior>>
+        +SK_ID_PREV : int
+    }
+
+    class installments_payments {
+        <<payments>>
+        +SK_ID_PREV : int
+    }
+
+    class credit_card_balance {
+        <<credit card>>
+        +SK_ID_PREV : int
+    }
+
+    application --> bureau : SK_ID_CURR
+    bureau --> bureau_balance : SK_ID_BUREAU
+    application --> previous_application : SK_ID_CURR
+    previous_application --> pos_cash_balance : SK_ID_PREV
+    previous_application --> installments_payments : SK_ID_PREV
+    previous_application --> credit_card_balance : SK_ID_PREV
