@@ -1,0 +1,44 @@
+schema_mermaid_code.txt
+
+# Environnement virtuel Poetry (optionnel, selon config locale)
+.venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Données (à adapter selon structure)
+data/
+*.csv
+*.parquet
+*.xlsx
+*.xls
+*.zip
+*.sav
+
+# MLflow auto-generated logs
+mlruns/
+
+# Résultats modèles
+*.joblib
+*.pkl
+models/
+
+# Logs et rapports temporaires
+*.log
+*.out
+*.tmp
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.code-workspace
