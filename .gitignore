@@ -44,3 +44,7 @@ Thumbs.db
 *.code-workspace
 
 cours_mlflow/
+
+# Travail sur Notebooks
+notebooks\kaggle_raw\copy_EDA_start-here-a-gentle-introduction.ipynb
+notebooks\kaggle_raw\start-here-a-gentle-introduction.ipynb
